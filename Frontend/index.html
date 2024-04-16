@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COINTAB</title>
+    <style>
+        :root {
+            --primary: rgb(30, 134, 61);
+            --secondary: rgb(19, 226, 147);
+            --secondary-light: rgb(90, 209, 162);
+
+        }
+
+        header>nav {
+            background-color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            color: var(--secondary)
+        }
+
+        #users {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        #all-user>button,
+        .addBtn {
+            padding: 10px 25px;
+            color: white;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: var(--secondary);
+            cursor: pointer;
+        }
+
+        #users>button:hover {
+            background-color: var(--secondary-light);
+        }
+
+        #user-container,
+        #post {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 40px 20px;
+            gap: 30px;
+        }
+
+        @media all and (max-width:830px) and (min-width:580px) {
+
+            #user-container,
+            #post {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+        }
+
+        @media all and (max-width:579px) {
+
+            #user-container,
+            #post {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+        }
+
+        #post {
+            row-gap: 30px;
+        }
+
+        .user-card {
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            line-height: 30px;
+            background-color: var(--primary);
+            font-weight: bold;
+            color: var(--secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        #button-cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        #name-cont {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: rgb(15, 9, 20);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Cointab
+            </h1>
+        </nav>
+    </header>
+    <div id="users">
+        <button>GET ALL USERS</button>
+    </div>
+
+    <div id="user-container">
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
